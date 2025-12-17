@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Directory & Search - LocalServiceHub</title>
+    
+    <!-- Google Analytics - Replace YOUR_GA_ID with your actual tracking ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_ID', {'page_path': '/directory.html'});
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .back-link {
+            color: #22c55e;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        /* Hero Section with Background Image Placeholder */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><text x="50%" y="50%" fill="%23666" font-size="24" text-anchor="middle" font-family="Arial">Add Your Directory Background Image Here</text></svg>');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .content-text h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .content-text p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .benefits {
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+
+        .benefit-icon {
+            color: #22c55e;
+            font-size: 24px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .benefit-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .benefit-text p {
+            color: #666;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* Form Section */
+        .form-container {
+            background: #f8f8f8;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 100px;
+        }
+
+        .form-container h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .form-container .subtitle {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+            background: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #22c55e;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            background: #22c55e;
+            color: #fff;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .success-message {
+            display: none;
+            background: #22c55e;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .form-container {
+                position: static;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">LocalServiceHub</div>
+                <a href="index.html" class="back-link">← Back to All Services</a>
+                <div class="contact-info">📧 info@grow.co.za</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Find What You Need</h1>
+            <p>Your comprehensive business directory and search platform for local products and services.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <h2>We Connect You With The Right Businesses</h2>
+                    <p>Looking for a specific product, service, or solution? Tell us what you need and we'll match you with the right local businesses. No more endless searching or guessing.</p>
+                    
+                    <p>Our comprehensive directory covers everything from professional services to products, contractors to consultants. Whatever you're looking for, we'll help you find it.</p>
+
+                    <div class="benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>Save Time</h4>
+                                <p>Stop searching - tell us what you need and we'll do the work</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>Verified Businesses</h4>
+                                <p>We connect you with trusted, verified local businesses</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>Wide Range</h4>
+                                <p>Access to businesses across all industries and sectors</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-text">
+                                <h4>Free Service</h4>
+                                <p>No cost to you - we help you find what you need</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3>What Are You Looking For?</h3>
+                    <p class="subtitle">Describe what you need and we'll connect you with solutions</p>
+                    
+                    <form onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>What are you searching for? *</label>
+                            <textarea name="details" placeholder="Describe the product, service, or solution you need (e.g., accounting services, web design, office furniture, catering, legal advice...)" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Find Solutions</button>
+                        <div class="success-message">Thank you! We'll send you matching businesses within 24 hours.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LocalServiceHub. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 14px;">📧 info@grow.co.za</p>
+        </div>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {
+                service: 'directory',
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                details: formData.get('details')
+            };
+
+            // Track conversion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'YOUR_GA_ID',
+                    'event_category': 'lead',
+                    'event_label': 'directory'
+                });
+            }
+
+            console.log('Directory lead captured:', data);
+            
+            const successMsg = form.querySelector('.success-message');
+            successMsg.style.display = 'block';
+            form.reset();
+            
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
