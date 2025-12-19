@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Roofing Installation - LocalServiceHub</title>
+    <title>Professional Roofing Installation - Local Service Hub</title>
     
-    <!-- Google Analytics - Replace YOUR_GA_ID with your actual tracking ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -21,24 +20,62 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --base-size: 1rem;
+            --scale: 1.25;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
+            line-height: 1.5;
             color: #1a1a1a;
             background: #ffffff;
+        }
+
+        p {
+            font-size: var(--base-size);
+            line-height: 150%;
+            letter-spacing: 0;
+        }
+
+        h1 {
+            font-size: calc(var(--base-size) * var(--scale) * var(--scale) * var(--scale) * var(--scale));
+            line-height: 100%;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: calc(var(--base-size) * var(--scale) * var(--scale) * var(--scale));
+            line-height: 110%;
+            letter-spacing: -0.015em;
+        }
+
+        h3 {
+            font-size: calc(var(--base-size) * var(--scale) * var(--scale));
+            line-height: 120%;
+            letter-spacing: -0.015em;
+        }
+
+        h4 {
+            font-size: calc(var(--base-size) * var(--scale));
+            line-height: 130%;
+            letter-spacing: -0.005em;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.25rem;
         }
 
-        /* Header */
         header {
             background: #000;
             color: #fff;
-            padding: 20px 0;
+            padding: 1.25rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -52,150 +89,144 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: 0.1em;
         }
 
-        .back-link {
-            color: #fbbf24;
+        .back-btn {
+            background: #fbbf24;
+            color: #000;
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
 
-        .back-link:hover {
-            opacity: 0.8;
+        .back-btn:hover {
+            background: #f59e0b;
+            transform: translateY(-1px);
         }
 
         .contact-info {
-            font-size: 14px;
+            font-size: 0.875rem;
             color: #fff;
         }
 
-        /* Hero Section with Background Image Placeholder */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><text x="50%" y="50%" fill="%23666" font-size="24" text-anchor="middle" font-family="Arial">Add Your Roofing Background Image Here</text></svg>');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.pexels.com/photos/48895/roof-plate-tiles-brick-red-48895.jpeg?auto=compress&cs=tinysrgb&w=1600');
             background-size: cover;
             background-position: center;
             color: #fff;
-            padding: 120px 0;
+            padding: 7.5rem 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 52px;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
             font-weight: 700;
-            letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: 22px;
-            margin-bottom: 40px;
+            font-size: 1.375rem;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* Content Section */
         .content-section {
-            padding: 80px 0;
+            padding: 5rem 0;
             background: #fff;
         }
 
         .content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 3.75rem;
             align-items: start;
         }
 
         .content-text h2 {
-            font-size: 36px;
-            margin-bottom: 25px;
+            margin-bottom: 1.5625rem;
             font-weight: 700;
         }
 
         .content-text p {
             color: #666;
-            margin-bottom: 20px;
-            line-height: 1.8;
-            font-size: 17px;
+            margin-bottom: 1.25rem;
         }
 
         .benefits {
-            margin-top: 30px;
+            margin-top: 1.875rem;
         }
 
         .benefit-item {
             display: flex;
             align-items: start;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
 
         .benefit-icon {
             color: #fbbf24;
-            font-size: 24px;
-            margin-right: 15px;
+            font-size: 1.5rem;
+            margin-right: 0.9375rem;
             flex-shrink: 0;
         }
 
         .benefit-text h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
+            margin-bottom: 0.3125rem;
             font-weight: 600;
         }
 
         .benefit-text p {
             color: #666;
-            font-size: 15px;
+            font-size: 0.9375rem;
             margin: 0;
         }
 
-        /* Form Section */
         .form-container {
             background: #f8f8f8;
-            padding: 40px;
-            border-radius: 12px;
+            padding: 2.5rem;
+            border-radius: 0.75rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             position: sticky;
-            top: 100px;
+            top: 6.25rem;
         }
 
         .form-container h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
             font-weight: 700;
         }
 
         .form-container .subtitle {
             color: #666;
-            margin-bottom: 25px;
-            font-size: 15px;
+            margin-bottom: 1.5625rem;
+            font-size: 0.9375rem;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 0.875rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
+            padding: 0.75rem 0.9375rem;
             border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            font-size: 15px;
+            border-radius: 0.375rem;
+            font-size: 0.9375rem;
             transition: border-color 0.3s ease;
             font-family: inherit;
             background: #fff;
@@ -209,16 +240,16 @@
 
         .form-group textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 7.5rem;
         }
 
         .btn {
             background: #fbbf24;
             color: #000;
-            padding: 14px 32px;
+            padding: 0.875rem 2rem;
             border: none;
-            border-radius: 6px;
-            font-size: 16px;
+            border-radius: 0.375rem;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -231,16 +262,11 @@
             box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
         }
 
-        .btn:active {
-            transform: translateY(0);
-        }
-
         .btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
         }
 
-        /* Modal/Popup Styles */
         .modal {
             display: none;
             position: fixed;
@@ -261,8 +287,8 @@
         .modal-content {
             background-color: #fff;
             margin: 15% auto;
-            padding: 40px;
-            border-radius: 12px;
+            padding: 2.5rem;
+            border-radius: 0.75rem;
             width: 90%;
             max-width: 500px;
             text-align: center;
@@ -282,28 +308,27 @@
         }
 
         .modal-icon {
-            font-size: 60px;
-            margin-bottom: 20px;
+            font-size: 3.75rem;
+            margin-bottom: 1.25rem;
         }
 
         .modal-content h2 {
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
             color: #1a1a1a;
         }
 
         .modal-content p {
             color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            margin-bottom: 1.875rem;
         }
 
         .modal-close-btn {
             background: #fbbf24;
             color: #000;
             border: none;
-            padding: 12px 30px;
-            border-radius: 6px;
-            font-size: 16px;
+            padding: 0.75rem 1.875rem;
+            border-radius: 0.375rem;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -313,49 +338,37 @@
             background: #f59e0b;
         }
 
-        .success-message {
-            display: none;
-            background: #fbbf24;
-            color: #000;
-            padding: 15px;
-            border-radius: 6px;
-            margin-top: 15px;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        /* Footer */
         footer {
             background: #000;
             color: #fff;
-            padding: 40px 0;
+            padding: 2.5rem 0;
             text-align: center;
         }
 
         footer p {
             opacity: 0.8;
+            font-size: 0.875rem;
         }
 
         .footer-links {
-            margin-top: 20px;
+            margin-top: 1.25rem;
         }
 
         .footer-links a {
             color: #fbbf24;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
+            margin: 0 0.9375rem;
+            font-size: 0.875rem;
         }
 
         .footer-links a:hover {
             opacity: 0.8;
         }
 
-        /* Responsive */
         @media (max-width: 968px) {
             .content-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 2.5rem;
             }
 
             .form-container {
@@ -363,16 +376,16 @@
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 2.375rem;
             }
 
             .hero p {
-                font-size: 18px;
+                font-size: 1.125rem;
             }
 
             .header-content {
                 flex-direction: column;
-                gap: 10px;
+                gap: 0.625rem;
                 text-align: center;
             }
         }
@@ -382,8 +395,8 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">LocalServiceHub</div>
-                <a href="index.html" class="back-link">← Back to All Services</a>
+                <div class="logo">Local Service Hub</div>
+                <a href="index.html" class="back-btn">← Back to All Services</a>
                 <div class="contact-info">📧 info@grow.co.za</div>
             </div>
         </div>
@@ -462,14 +475,12 @@
                             <textarea name="details" placeholder="Describe your project (e.g., new roof installation, repairs, leak fixing, roof type preference...)" required></textarea>
                         </div>
                         <button type="submit" class="btn">Get My Free Quote</button>
-                        <div class="success-message">Thank you! We'll contact you within 24 hours.</div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Success Modal -->
     <div id="successModal" class="modal">
         <div class="modal-content">
             <div class="modal-icon">✅</div>
@@ -481,12 +492,12 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 LocalServiceHub. All rights reserved.</p>
+            <p>&copy; 2025 Local Service Hub. All rights reserved.</p>
             <div class="footer-links">
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="terms-conditions.html">Terms & Conditions</a>
             </div>
-            <p style="margin-top: 15px; font-size: 14px;">📧 info@grow.co.za</p>
+            <p style="margin-top: 0.9375rem;">📧 info@grow.co.za</p>
         </div>
     </footer>
 
@@ -501,7 +512,6 @@
             const form = event.target;
             const submitBtn = form.querySelector('.btn');
             
-            // Check if all required fields are filled
             const formData = new FormData(form);
             const name = formData.get('name');
             const email = formData.get('email');
@@ -513,7 +523,6 @@
                 return;
             }
             
-            // Disable button during submission
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
             
@@ -527,7 +536,6 @@
             };
 
             try {
-                // Track conversion
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'conversion', {
                         'send_to': 'YOUR_GA_ID',
@@ -545,7 +553,6 @@
                     body: JSON.stringify(data)
                 });
                 
-                // Show modal popup
                 document.getElementById('successModal').style.display = 'block';
                 form.reset();
                 
@@ -553,13 +560,11 @@
                 console.error('Error:', error);
                 alert('There was an error submitting your form. Please try again or contact us directly at info@grow.co.za');
             } finally {
-                // Re-enable button
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Get My Free Quote';
             }
         }
 
-        // Close modal when clicking outside of it
         window.onclick = function(event) {
             const modal = document.getElementById('successModal');
             if (event.target == modal) {

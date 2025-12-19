@@ -3,16 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LocalServiceHub - Local Services at Your Fingertips</title>
-    
-    <!-- Google Analytics - Replace YOUR_GA_ID with your actual tracking ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_GA_ID');
-    </script>
+    <title>Local Services Hub by Kroot - Connect with Quality Local Businesses</title>
     
     <style>
         * {
@@ -21,24 +12,67 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --alabaster: #cfdbd5;
+            --linen: #e8eddf;
+            --tuscan: #f5cb5c;
+            --carbon: #242423;
+            --graphite: #333533;
+            --base-size: 1rem;
+            --scale: 1.25;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
+            line-height: 1.5;
+            color: var(--graphite);
+            background: #fff;
+        }
+
+        p {
+            font-size: var(--base-size);
+            line-height: 150%;
+            letter-spacing: 0;
+        }
+
+        h1 {
+            font-size: calc(var(--base-size) * var(--scale) * var(--scale) * var(--scale) * var(--scale));
+            line-height: 100%;
+            letter-spacing: -0.02em;
+            color: var(--carbon);
+            font-weight: 900;
+        }
+
+        h2 {
+            font-size: calc(var(--base-size) * var(--scale) * var(--scale) * var(--scale));
+            line-height: 110%;
+            letter-spacing: -0.015em;
+            color: var(--carbon);
+        }
+
+        h3 {
+            font-size: calc(var(--base-size) * var(--scale) * var(--scale));
+            line-height: 120%;
+            letter-spacing: -0.015em;
+            color: var(--carbon);
+            font-weight: 800;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.25rem;
         }
 
         /* Header */
         header {
-            background: #000;
+            background: var(--carbon);
             color: #fff;
-            padding: 20px 0;
+            padding: 1.5rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -52,125 +86,174 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: 0.05em;
         }
 
-        .contact-info {
-            font-size: 14px;
-            color: #fff;
+        .logo-accent {
+            color: var(--tuscan);
+        }
+
+        .header-tagline {
+            font-size: 0.875rem;
+            opacity: 0.9;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #000 0%, #2a2a2a 100%);
-            color: #fff;
-            padding: 100px 0;
+            background: linear-gradient(135deg, var(--linen) 0%, var(--alabaster) 100%);
+            padding: 6rem 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: -1px;
+            margin-bottom: 1.25rem;
+            font-weight: 900;
         }
 
         .hero p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.9;
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--graphite);
         }
 
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-            background: #f8f8f8;
+        /* Businesses Grid */
+        .businesses-section {
+            padding: 5rem 0;
+            background: #fff;
         }
 
         .section-title {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 60px;
             font-weight: 700;
+            margin-bottom: 0.75rem;
         }
 
-        .services-grid {
+        .section-subtitle {
+            text-align: center;
+            color: var(--graphite);
+            margin-bottom: 3.75rem;
+            font-size: 1.125rem;
+        }
+
+        .businesses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
         }
 
-        .service-card {
-            background: #fff;
-            padding: 40px;
-            border-radius: 12px;
+        /* Business Card - Split Layout */
+        .business-card {
+            background: var(--linen);
+            border-radius: 1.5rem;
+            overflow: hidden;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-
-        .service-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .service-card p {
-            color: #666;
-            margin-bottom: 25px;
-            line-height: 1.8;
-        }
-
-        .btn-learn-more {
-            display: inline-block;
-            background: #fbbf24;
-            color: #000;
-            padding: 12px 28px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
             transition: all 0.3s ease;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 300px;
         }
 
-        .btn-learn-more:hover {
-            background: #f59e0b;
+        .business-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-content {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-text h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+            font-weight: 900;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .card-text p {
+            color: var(--graphite);
+            margin-bottom: 1.5rem;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        .business-category {
+            display: inline-block;
+            background: transparent;
+            color: var(--graphite);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .btn-card {
+            background: var(--carbon);
+            color: #fff;
+            padding: 0.875rem 1.75rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9375rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-card:hover {
+            background: var(--graphite);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+        }
+
+        .card-image {
+            background: var(--alabaster);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image::before {
+            content: 'IMAGE PLACEHOLDER';
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--graphite);
+            opacity: 0.3;
+            letter-spacing: 0.1em;
         }
 
         /* Footer */
         footer {
-            background: #000;
+            background: var(--carbon);
             color: #fff;
-            padding: 40px 0;
+            padding: 3rem 0;
             text-align: center;
         }
 
         footer p {
-            opacity: 0.8;
+            opacity: 0.9;
+            font-size: 0.875rem;
         }
 
         .footer-links {
-            margin-top: 20px;
+            margin-top: 1.25rem;
         }
 
         .footer-links a {
-            color: #fbbf24;
+            color: var(--tuscan);
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
+            margin: 0 1rem;
+            font-size: 0.875rem;
         }
 
         .footer-links a:hover {
@@ -179,25 +262,35 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .businesses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .business-card {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .card-image {
+                min-height: 200px;
+            }
+
             .hero h1 {
-                font-size: 36px;
+                font-size: 2rem;
             }
 
             .hero p {
-                font-size: 18px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
+                font-size: 1.125rem;
             }
 
             .header-content {
                 flex-direction: column;
-                gap: 10px;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .header-tagline {
+                display: none;
             }
         }
     </style>
@@ -206,45 +299,83 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">LocalServiceHub</div>
-                <div class="contact-info">📧 info@grow.co.za</div>
+                <div class="logo">Local Services Hub by <span class="logo-accent">Kroot</span></div>
+                <div class="header-tagline">Connecting you with quality local businesses</div>
             </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h1>Local Services at Your Fingertips</h1>
-            <p>Connecting you with quality roofing, technology, and business solutions</p>
+            <h1>Find Trusted Local Businesses</h1>
+            <p>Connect with verified service providers in your area. From beauty services to tree care, we've got you covered.</p>
         </div>
     </section>
 
-    <section class="services">
+    <section class="businesses-section">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <!-- Roofing Service -->
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Professional Roofing Installation</h3>
-                    <p>Need a new roof or roof repairs? Get connected with trusted roofing professionals in your area. Quality workmanship guaranteed.</p>
-                    <a href="roofing.html" class="btn-learn-more">Learn More</a>
+            <h2 class="section-title">Our Business Partners</h2>
+            <p class="section-subtitle">Quality services you can trust</p>
+            
+            <div class="businesses-grid">
+                <!-- Dragonfly Nail & Beauty -->
+                <div class="business-card">
+                    <div class="card-content">
+                        <div>
+                            <span class="business-category">Nail & Beauty Salon</span>
+                            <div class="card-text">
+                                <h3>Professional Nail Care and Beauty Treatments.</h3>
+                                <p>Keep your hands and feet looking great with our expert services.</p>
+                            </div>
+                        </div>
+                        <a href="dragonfly-nail-beauty.html" class="btn-card">Book Appointment</a>
+                    </div>
+                    <div class="card-image"></div>
                 </div>
 
-                <!-- Refurbished Laptops -->
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Quality Refurbished Laptops</h3>
-                    <p>Looking for affordable, reliable laptops? Browse our selection of professionally refurbished devices perfect for work or study.</p>
-                    <a href="laptops.html" class="btn-learn-more">Learn More</a>
+                <!-- Tall Guy Tree Service -->
+                <div class="business-card">
+                    <div class="card-content">
+                        <div>
+                            <span class="business-category">Tree Care & Removal</span>
+                            <div class="card-text">
+                                <h3>Expert Tree Cutting and Maintenance.</h3>
+                                <p>Safer, cleaner outdoor spaces with professional tree services.</p>
+                            </div>
+                        </div>
+                        <a href="tall-guy-tree-service.html" class="btn-card">Get Quote</a>
+                    </div>
+                    <div class="card-image"></div>
                 </div>
 
-                <!-- Business Directory -->
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>Business Directory & Search</h3>
-                    <p>Can't find what you're looking for? Tell us what you need and we'll connect you with the right local businesses and solutions.</p>
-                    <a href="directory.html" class="btn-learn-more">Learn More</a>
+                <!-- Vaal Skip Hire -->
+                <div class="business-card">
+                    <div class="card-content">
+                        <div>
+                            <span class="business-category">Skip & Waste Removal</span>
+                            <div class="card-text">
+                                <h3>Convenient Skip Bin Hires and Rubble Removal.</h3>
+                                <p>Solutions for residential, commercial, and construction projects.</p>
+                            </div>
+                        </div>
+                        <a href="vaal-skip-hire.html" class="btn-card">Request Service</a>
+                    </div>
+                    <div class="card-image"></div>
+                </div>
+
+                <!-- Kroot Online -->
+                <div class="business-card">
+                    <div class="card-content">
+                        <div>
+                            <span class="business-category">Web Design & Digital Presence</span>
+                            <div class="card-text">
+                                <h3>Scale Your Business to the Next Level.</h3>
+                                <p>Creating your online presence with professional web solutions.</p>
+                            </div>
+                        </div>
+                        <a href="kroot-online.html" class="btn-card">Get Started</a>
+                    </div>
+                    <div class="card-image"></div>
                 </div>
             </div>
         </div>
@@ -252,12 +383,12 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 LocalServiceHub. All rights reserved.</p>
+            <p>&copy; 2025 Local Services Hub by Kroot. All rights reserved.</p>
             <div class="footer-links">
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="terms-conditions.html">Terms & Conditions</a>
             </div>
-            <p style="margin-top: 15px; font-size: 14px;">📧 info@grow.co.za</p>
+            <p style="margin-top: 1rem;">📧 info@kroot.co.za</p>
         </div>
     </footer>
 </body>
