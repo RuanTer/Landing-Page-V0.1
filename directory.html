@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Directory & Search - LocalServiceHub</title>
+    <title>Business Directory & Search - Local Service Hub</title>
     
-    <!-- Google Analytics - Replace YOUR_GA_ID with your actual tracking ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -15,368 +14,15 @@
     </script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: #000;
-            color: #fff;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .back-link {
-            color: #fbbf24;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-        }
-
-        .back-link:hover {
-            opacity: 0.8;
-        }
-
-        .contact-info {
-            font-size: 14px;
-            color: #fff;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><text x="50%" y="50%" fill="%23666" font-size="24" text-anchor="middle" font-family="Arial">Add Your Directory Background Image Here</text></svg>');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 120px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .content-section {
-            padding: 80px 0;
-            background: #fff;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .content-text h2 {
-            font-size: 36px;
-            margin-bottom: 25px;
-            font-weight: 700;
-        }
-
-        .content-text p {
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        .benefits {
-            margin-top: 30px;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: start;
-            margin-bottom: 20px;
-        }
-
-        .benefit-icon {
-            color: #fbbf24;
-            font-size: 24px;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-
-        .benefit-text h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .benefit-text p {
-            color: #666;
-            font-size: 15px;
-            margin: 0;
-        }
-
-        .form-container {
-            background: #f8f8f8;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 100px;
-        }
-
-        .form-container h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .form-container .subtitle {
-            color: #666;
-            margin-bottom: 25px;
-            font-size: 15px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            font-size: 15px;
-            transition: border-color 0.3s ease;
-            font-family: inherit;
-            background: #fff;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #fbbf24;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .btn {
-            background: #fbbf24;
-            color: #000;
-            padding: 14px 32px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        .btn:hover {
-            background: #f59e0b;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 40px;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 500px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            animation: slideIn 0.3s ease;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-        }
-
-        .modal-content h2 {
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-
-        .modal-content p {
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .modal-close-btn {
-            background: #fbbf24;
-            color: #000;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .modal-close-btn:hover {
-            background: #f59e0b;
-        }
-
-        .success-message {
-            display: none;
-            background: #fbbf24;
-            color: #000;
-            padding: 15px;
-            border-radius: 6px;
-            margin-top: 15px;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        footer {
-            background: #000;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        footer p {
-            opacity: 0.8;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-        }
-
-        .footer-links a {
-            color: #fbbf24;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
-        }
-
-        .footer-links a:hover {
-            opacity: 0.8;
-        }
-
-        @media (max-width: 968px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .form-container {
-                position: static;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .header-content {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-        }
+        *{margin:0;padding:0;box-sizing:border-box}:root{--base-size:1rem;--scale:1.25}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;line-height:1.5;color:#1a1a1a;background:#fff}p{font-size:var(--base-size);line-height:150%;letter-spacing:0}h1{font-size:calc(var(--base-size) * var(--scale) * var(--scale) * var(--scale) * var(--scale));line-height:100%;letter-spacing:-0.02em}h2{font-size:calc(var(--base-size) * var(--scale) * var(--scale) * var(--scale));line-height:110%;letter-spacing:-0.015em}h3{font-size:calc(var(--base-size) * var(--scale) * var(--scale));line-height:120%;letter-spacing:-0.015em}h4{font-size:calc(var(--base-size) * var(--scale));line-height:130%;letter-spacing:-0.005em}.container{max-width:1200px;margin:0 auto;padding:0 1.25rem}header{background:#000;color:#fff;padding:1.25rem 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,0.1)}.header-content{display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.5rem;font-weight:700;letter-spacing:0.1em}.back-btn{background:#fbbf24;color:#000;text-decoration:none;padding:0.5rem 1.25rem;border-radius:0.375rem;font-size:0.875rem;font-weight:600;transition:all 0.3s ease}.back-btn:hover{background:#f59e0b;transform:translateY(-1px)}.contact-info{font-size:0.875rem;color:#fff}.hero{background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://images.pexels.com/photos/9143804/pexels-photo-9143804.jpeg?auto=compress&cs=tinysrgb&w=1600');background-size:cover;background-position:center;color:#fff;padding:7.5rem 0;text-align:center}.hero h1{margin-bottom:1.25rem;font-weight:700}.hero p{font-size:1.375rem;margin-bottom:2.5rem;opacity:0.95;max-width:700px;margin-left:auto;margin-right:auto}.content-section{padding:5rem 0;background:#fff}.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.75rem;align-items:start}.content-text h2{margin-bottom:1.5625rem;font-weight:700}.content-text p{color:#666;margin-bottom:1.25rem}.benefits{margin-top:1.875rem}.benefit-item{display:flex;align-items:start;margin-bottom:1.25rem}.benefit-icon{color:#fbbf24;font-size:1.5rem;margin-right:0.9375rem;flex-shrink:0}.benefit-text h4{margin-bottom:0.3125rem;font-weight:600}.benefit-text p{color:#666;font-size:0.9375rem;margin:0}.form-container{background:#f8f8f8;padding:2.5rem;border-radius:0.75rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);position:sticky;top:6.25rem}.form-container h3{margin-bottom:0.625rem;font-weight:700}.form-container .subtitle{color:#666;margin-bottom:1.5625rem;font-size:0.9375rem}.form-group{margin-bottom:1.25rem}.form-group label{display:block;margin-bottom:0.5rem;font-weight:500;font-size:0.875rem}.form-group input,.form-group textarea{width:100%;padding:0.75rem 0.9375rem;border:2px solid #e0e0e0;border-radius:0.375rem;font-size:0.9375rem;transition:border-color 0.3s ease;font-family:inherit;background:#fff}.form-group input:focus,.form-group textarea:focus{outline:none;border-color:#fbbf24}.form-group textarea{resize:vertical;min-height:7.5rem}.btn{background:#fbbf24;color:#000;padding:0.875rem 2rem;border:none;border-radius:0.375rem;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.3s ease;width:100%}.btn:hover{background:#f59e0b;transform:translateY(-2px);box-shadow:0 4px 12px rgba(251,191,36,0.4)}.btn:disabled{opacity:0.6;cursor:not-allowed}.modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);animation:fadeIn 0.3s ease}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.modal-content{background-color:#fff;margin:15% auto;padding:2.5rem;border-radius:0.75rem;width:90%;max-width:500px;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,0.3);animation:slideIn 0.3s ease}@keyframes slideIn{from{transform:translateY(-50px);opacity:0}to{transform:translateY(0);opacity:1}}.modal-icon{font-size:3.75rem;margin-bottom:1.25rem}.modal-content h2{margin-bottom:0.9375rem;color:#1a1a1a}.modal-content p{color:#666;margin-bottom:1.875rem}.modal-close-btn{background:#fbbf24;color:#000;border:none;padding:0.75rem 1.875rem;border-radius:0.375rem;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.3s ease}.modal-close-btn:hover{background:#f59e0b}footer{background:#000;color:#fff;padding:2.5rem 0;text-align:center}footer p{opacity:0.8;font-size:0.875rem}.footer-links{margin-top:1.25rem}.footer-links a{color:#fbbf24;text-decoration:none;margin:0 0.9375rem;font-size:0.875rem}.footer-links a:hover{opacity:0.8}@media (max-width:968px){.content-grid{grid-template-columns:1fr;gap:2.5rem}.form-container{position:static}.hero h1{font-size:2.375rem}.hero p{font-size:1.125rem}.header-content{flex-direction:column;gap:0.625rem;text-align:center}}
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">LocalServiceHub</div>
-                <a href="index.html" class="back-link">← Back to All Services</a>
+                <div class="logo">Local Service Hub</div>
+                <a href="index.html" class="back-btn">← Back to All Services</a>
                 <div class="contact-info">📧 info@grow.co.za</div>
             </div>
         </div>
@@ -406,7 +52,6 @@
                                 <p>Stop searching - tell us what you need and we'll do the work</p>
                             </div>
                         </div>
-
                         <div class="benefit-item">
                             <div class="benefit-icon">✓</div>
                             <div class="benefit-text">
@@ -414,7 +59,6 @@
                                 <p>We connect you with trusted, verified local businesses</p>
                             </div>
                         </div>
-
                         <div class="benefit-item">
                             <div class="benefit-icon">✓</div>
                             <div class="benefit-text">
@@ -422,7 +66,6 @@
                                 <p>Access to businesses across all industries and sectors</p>
                             </div>
                         </div>
-
                         <div class="benefit-item">
                             <div class="benefit-icon">✓</div>
                             <div class="benefit-text">
@@ -455,7 +98,6 @@
                             <textarea name="details" placeholder="Describe the product, service, or solution you need (e.g., accounting services, web design, office furniture, catering, legal advice...)" required></textarea>
                         </div>
                         <button type="submit" class="btn">Find Solutions</button>
-                        <div class="success-message">Thank you! We'll send you matching businesses within 24 hours.</div>
                     </form>
                 </div>
             </div>
@@ -473,85 +115,17 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 LocalServiceHub. All rights reserved.</p>
+            <p>&copy; 2025 Local Service Hub. All rights reserved.</p>
             <div class="footer-links">
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="terms-conditions.html">Terms & Conditions</a>
             </div>
-            <p style="margin-top: 15px; font-size: 14px;">📧 info@grow.co.za</p>
+            <p style="margin-top:0.9375rem">📧 info@grow.co.za</p>
         </div>
     </footer>
 
     <script>
-        function closeModal() {
-            document.getElementById('successModal').style.display = 'none';
-        }
-
-        async function submitForm(event) {
-            event.preventDefault();
-            
-            const form = event.target;
-            const submitBtn = form.querySelector('.btn');
-            
-            const formData = new FormData(form);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const phone = formData.get('phone');
-            const details = formData.get('details');
-            
-            if (!name || !email || !phone || !details) {
-                alert('Please complete all fields');
-                return;
-            }
-            
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            
-            const data = {
-                service: 'directory',
-                name: name,
-                email: email,
-                phone: phone,
-                details: details,
-                source: 'Directory Page'
-            };
-
-            try {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'YOUR_GA_ID',
-                        'event_category': 'lead',
-                        'event_label': 'directory'
-                    });
-                }
-
-                const response = await fetch('https://script.google.com/macros/s/AKfycbziJTM_f10I6HHhoVH6z0xHYxoao4ykm7pdu5KMTLeUecLELNwgPEKmqIwQ78O_lX_7hg/exec', {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-                
-                document.getElementById('successModal').style.display = 'block';
-                form.reset();
-                
-            } catch (error) {
-                console.error('Error:', error);
-                alert('There was an error submitting your form. Please try again or contact us directly at info@grow.co.za');
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Find Solutions';
-            }
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('successModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
+        function closeModal(){document.getElementById('successModal').style.display='none'}async function submitForm(e){e.preventDefault();const form=e.target,btn=form.querySelector('.btn'),fd=new FormData(form),name=fd.get('name'),email=fd.get('email'),phone=fd.get('phone'),details=fd.get('details');if(!name||!email||!phone||!details){alert('Please complete all fields');return}btn.disabled=true;btn.textContent='Sending...';const data={service:'directory',name,email,phone,details,source:'Directory Page'};try{if(typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'YOUR_GA_ID','event_category':'lead','event_label':'directory'})}await fetch('https://script.google.com/macros/s/AKfycbziJTM_f10I6HHhoVH6z0xHYxoao4ykm7pdu5KMTLeUecLELNwgPEKmqIwQ78O_lX_7hg/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});document.getElementById('successModal').style.display='block';form.reset()}catch(error){console.error('Error:',error);alert('There was an error submitting your form. Please try again or contact us directly at info@grow.co.za')}finally{btn.disabled=false;btn.textContent='Find Solutions'}}window.onclick=function(e){const modal=document.getElementById('successModal');if(e.target==modal){closeModal()}}
     </script>
 </body>
 </html>
