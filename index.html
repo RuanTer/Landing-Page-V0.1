@@ -223,13 +223,15 @@
             overflow: hidden;
         }
 
-        .card-image::before {
-            content: 'IMAGE PLACEHOLDER';
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--graphite);
-            opacity: 0.3;
-            letter-spacing: 0.1em;
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .business-card:hover .card-image img {
+            transform: scale(1.05);
         }
 
         /* Footer */
@@ -330,7 +332,9 @@
                         </div>
                         <a href="kroot-online.html" class="btn-card">Get Started</a>
                     </div>
-                    <div class="card-image"></div>
+                    <div class="card-image">
+                        <img src="images/business-cards/kroot-online.jpg" alt="Kroot Online - Web Design Services">
+                    </div>
                 </div>
 
                 <!-- WZS Trading (Handyman) -->
@@ -345,7 +349,9 @@
                         </div>
                         <a href="handyman-service.html" class="btn-card">Get Quote</a>
                     </div>
-                    <div class="card-image"></div>
+                    <div class="card-image">
+                        <img src="images/business-cards/wzs-trading.jpg" alt="WZS Trading - Handyman Services">
+                    </div>
                 </div>
 
                 <!-- Borderline Renovations -->
@@ -360,7 +366,9 @@
                         </div>
                         <a href="home-renovations.html" class="btn-card">Get Quote</a>
                     </div>
-                    <div class="card-image"></div>
+                    <div class="card-image">
+                        <img src="images/business-cards/borderline-renovations.jpg" alt="Borderline Renovations - Home Renovation Services">
+                    </div>
                 </div>
 
                 <!-- Tall Guy Tree Service -->
@@ -375,7 +383,9 @@
                         </div>
                         <a href="tall-guy-tree-service.html" class="btn-card">Get Quote</a>
                     </div>
-                    <div class="card-image"></div>
+                    <div class="card-image">
+                        <img src="images/business-cards/tall-guy-tree-service.jpg" alt="Tall Guy Tree Service - Tree Care and Removal">
+                    </div>
                 </div>
 
                 <!-- Vaal Skip Hire -->
@@ -390,7 +400,9 @@
                         </div>
                         <a href="vaal-skip-hire.html" class="btn-card">Request Service</a>
                     </div>
-                    <div class="card-image"></div>
+                    <div class="card-image">
+                        <img src="images/business-cards/vaal-skip-hire.jpg" alt="Vaal Skip Hire - Waste Removal Services">
+                    </div>
                 </div>
             </div>
         </div>

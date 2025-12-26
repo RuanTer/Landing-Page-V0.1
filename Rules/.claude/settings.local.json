@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx:*)",
+      "Bash(cat:*)",
+      "Bash(claude mcp list:*)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(dir:*)",
+      "Bash(tasklist:*)",
+      "Bash(cmd /c \"tasklist | findstr /i node\")",
+      "Bash(ls:*)",
+      "Bash(python fix-service-pages.py:*)"
+    ]
+  }
+}
