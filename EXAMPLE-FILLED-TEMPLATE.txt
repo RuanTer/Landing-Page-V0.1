@@ -1,0 +1,213 @@
+===========================================
+SERVICE PAGE TEMPLATE - FILLED EXAMPLE
+For: WZS Trading Handyman Service
+===========================================
+
+This shows you EXACTLY what each placeholder should be replaced with.
+Use Find & Replace (Ctrl+H) to make changes quickly.
+
+-------------------------------------------
+HEADER SECTION REPLACEMENTS:
+-------------------------------------------
+
+Line 6:
+FROM: <title>BUSINESS_NAME - SERVICE_TYPE in the Vaal Triangle</title>
+TO:   <title>WZS Trading - Professional Handyman Services in the Vaal Triangle</title>
+
+Line 9:
+FROM: <meta name="description" content="META_DESCRIPTION">
+TO:   <meta name="description" content="Trusted handyman services in the Vaal Triangle. Steel works, carports, electrical wiring, gate motor repairs, and emergency fixes.">
+
+Line 12:
+FROM: <meta name="keywords" content="META_KEYWORDS">
+TO:   <meta name="keywords" content="handyman Vaal Triangle, carport installation, gate motor repair, electrical wiring, WZS Trading">
+
+-------------------------------------------
+HEADER & HERO REPLACEMENTS:
+-------------------------------------------
+
+Line 80 (Business name in header):
+FROM: <div class="business-name">BUSINESS_NAME</div>
+TO:   <div class="business-name">WZS Trading</div>
+
+Line 88 (Category tag):
+FROM: <span class="business-category">BUSINESS_CATEGORY</span>
+TO:   <span class="business-category">Handyman Services</span>
+
+Line 91 (Main heading):
+FROM: <h1>BUSINESS_NAME</h1>
+TO:   <h1>WZS Trading</h1>
+
+Line 94 (Hero description):
+FROM: <p>HERO_DESCRIPTION</p>
+TO:   <p>Trusted professional handyman services in the Vaal Triangle area.</p>
+
+-------------------------------------------
+SERVICE CARD 1 REPLACEMENTS:
+-------------------------------------------
+
+Line 106:
+FROM: <img src="images/services/SERVICE1_IMAGE.jpg" alt="SERVICE1_ALT" class="service-image">
+TO:   <img src="images/services/carport-installation.jpg" alt="Carport installation service" class="service-image">
+
+Line 108:
+FROM: <h3>SERVICE1_TITLE</h3>
+TO:   <h3>Carport Installation</h3>
+
+Line 109:
+FROM: <p>SERVICE1_DESCRIPTION</p>
+TO:   <p>Professional steel works and roofing installation of carports.</p>
+
+-------------------------------------------
+SERVICE CARD 2 REPLACEMENTS:
+-------------------------------------------
+
+Line 115:
+FROM: <img src="images/services/SERVICE2_IMAGE.jpg" alt="SERVICE2_ALT" class="service-image">
+TO:   <img src="images/services/electrical-wiring.jpg" alt="Electrical wiring service" class="service-image">
+
+Line 117:
+FROM: <h3>SERVICE2_TITLE</h3>
+TO:   <h3>Electrical Wiring</h3>
+
+Line 118:
+FROM: <p>SERVICE2_DESCRIPTION</p>
+TO:   <p>Home electrical wiring repairs and installations.</p>
+
+-------------------------------------------
+SERVICE CARD 3 REPLACEMENTS:
+-------------------------------------------
+
+Line 124:
+FROM: <img src="images/services/SERVICE3_IMAGE.jpg" alt="SERVICE3_ALT" class="service-image">
+TO:   <img src="images/services/gate-motor-repair.jpg" alt="Gate motor repair service" class="service-image">
+
+Line 126:
+FROM: <h3>SERVICE3_TITLE</h3>
+TO:   <h3>Gate Motor Repair</h3>
+
+Line 127:
+FROM: <p>SERVICE3_DESCRIPTION</p>
+TO:   <p>Gate motor repairs and maintenance.</p>
+
+-------------------------------------------
+SERVICE CARD 4 REPLACEMENTS:
+-------------------------------------------
+
+Line 133:
+FROM: <img src="images/services/SERVICE4_IMAGE.jpg" alt="SERVICE4_ALT" class="service-image">
+TO:   <img src="images/services/emergency-repairs.jpg" alt="Emergency repair service" class="service-image">
+
+Line 135:
+FROM: <h3>SERVICE4_TITLE</h3>
+TO:   <h3>Emergency Repairs</h3>
+
+Line 136:
+FROM: <p>SERVICE4_DESCRIPTION</p>
+TO:   <p>Emergency repairs and quick fixes.</p>
+
+-------------------------------------------
+FORM CONFIGURATION (JavaScript):
+-------------------------------------------
+
+Lines 287-290:
+FROM:
+const FORM_CONFIG = {
+    endpoint: 'FORM_ENDPOINT_URL',
+    serviceName: 'SERVICE_NAME',
+    source: 'SERVICE_NAME Page'
+};
+
+TO:
+const FORM_CONFIG = {
+    endpoint: 'https://script.google.com/macros/s/AKfycbziJTM_f10I6HHhoVH6z0xHYxoao4ykm7pdu5KMTLeUecLELNwgPEKmqIwQ78O_lX_7hg/exec',
+    serviceName: 'Handyman',
+    source: 'WZS Trading Page'
+};
+
+-------------------------------------------
+OPTIONAL: GOOGLE ANALYTICS
+-------------------------------------------
+
+Lines 20-29 (Uncomment and replace):
+FROM: (commented out)
+TO:
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123XYZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ABC123XYZ');
+</script>
+
+(Replace G-ABC123XYZ with your actual tracking ID)
+
+-------------------------------------------
+OPTIONAL: WHATSAPP BUSINESS
+-------------------------------------------
+
+Line 245:
+FROM: <a href="https://wa.me/WHATSAPP_NUMBER?text=Hi!%20I'm%20interested%20in%20your%20services"
+      class="whatsapp-float"
+
+TO:   <a href="https://wa.me/27821234567?text=Hi!%20I'm%20interested%20in%20your%20handyman%20services"
+      class="whatsapp-float active"
+
+(Replace 27821234567 with your WhatsApp Business number)
+(Add "active" class to show the button)
+
+===========================================
+IMAGES NEEDED:
+===========================================
+
+Service Cards (in /images/services/):
+1. carport-installation.jpg
+2. electrical-wiring.jpg
+3. gate-motor-repair.jpg
+4. emergency-repairs.jpg
+
+Business Card (in /images/business-cards/):
+1. wzs-trading.jpg (800x600px minimum)
+
+===========================================
+FIND & REPLACE QUICK LIST:
+===========================================
+
+Use these in order for fastest results:
+
+1. BUSINESS_NAME → WZS Trading
+2. SERVICE_TYPE → Professional Handyman Services
+3. BUSINESS_CATEGORY → Handyman Services
+4. META_DESCRIPTION → Trusted handyman services in the Vaal Triangle. Steel works, carports, electrical wiring, gate motor repairs, and emergency fixes.
+5. META_KEYWORDS → handyman Vaal Triangle, carport installation, gate motor repair, electrical wiring, WZS Trading
+6. HERO_DESCRIPTION → Trusted professional handyman services in the Vaal Triangle area.
+
+7. SERVICE1_IMAGE → carport-installation
+8. SERVICE1_ALT → Carport installation service
+9. SERVICE1_TITLE → Carport Installation
+10. SERVICE1_DESCRIPTION → Professional steel works and roofing installation of carports.
+
+11. SERVICE2_IMAGE → electrical-wiring
+12. SERVICE2_ALT → Electrical wiring service
+13. SERVICE2_TITLE → Electrical Wiring
+14. SERVICE2_DESCRIPTION → Home electrical wiring repairs and installations.
+
+15. SERVICE3_IMAGE → gate-motor-repair
+16. SERVICE3_ALT → Gate motor repair service
+17. SERVICE3_TITLE → Gate Motor Repair
+18. SERVICE3_DESCRIPTION → Gate motor repairs and maintenance.
+
+19. SERVICE4_IMAGE → emergency-repairs
+20. SERVICE4_ALT → Emergency repair service
+21. SERVICE4_TITLE → Emergency Repairs
+22. SERVICE4_DESCRIPTION → Emergency repairs and quick fixes.
+
+23. FORM_ENDPOINT_URL → https://script.google.com/macros/s/AKfycbziJTM_f10I6HHhoVH6z0xHYxoao4ykm7pdu5KMTLeUecLELNwgPEKmqIwQ78O_lX_7hg/exec
+24. SERVICE_NAME → Handyman (appears twice - replace both)
+
+===========================================
+DONE!
+===========================================
+
+Your service page is ready to use!
+Save as: handyman-service.html
